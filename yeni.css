@@ -1,0 +1,954 @@
+.baslik h1 {
+    color: rgb(140, 141, 109);
+    font-family: "Libre Caslon Display", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.baslik h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: transparent; /* Alt çizgiyi kaldır */
+}
+
+.menubar {
+    padding-top: 80px;
+    justify-content: center;
+}
+
+.menubar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.menubar ul li {
+    margin: 0 40px;
+    font-size: 17px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-weight: 400;
+}
+
+.menubar ul li a.anasayfa {
+    color: rgb(184, 183, 183);
+}
+
+.menubar ul li a.active {
+    color: rgb(140, 141, 109);
+    font-weight: 600;
+    position: relative;
+}
+
+.menubar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: rgb(140, 141, 109);
+}
+
+.menubar ul li a:hover {
+    background: rgba(140, 141, 109, 0.1);
+}
+
+.dilbutonu {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.dilbutonu a {
+    text-decoration: none;
+    color: rgb(72, 72, 72);
+    font-weight: 500;
+}
+
+.dilbutonu a.aktif {
+    color: rgb(184, 183, 183);
+    cursor: default;
+}
+
+.dilbutonu span {
+    margin: 0 5px;
+    display: inline-block;
+    color: rgb(72, 72, 72);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.projefotograflari {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.projefotograflari a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.projefotograflari a.aktif {
+    opacity: 1;
+}
+
+.projefotograflari img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.baslik, .menubar {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    padding: 10px 0;
+}
+
+.baslik {
+    margin-bottom: 0;
+}
+
+.menubar {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.fotograf {
+    max-width: 50%;
+    height: auto;
+    display: none;
+}
+
+.fotograf.aktif {
+    display: block;
+}
+
+.pkproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.pkproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.pkproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.gmproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gmproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.gmproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.arşmerproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.arşmerproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.arşmerproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.pkproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.pkproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.pkproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.gmproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gmproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.gmproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.arşmerproje {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.arşmerproje img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(103, 103, 103, 0.1);
+    border: 1px solid #949494;
+}
+
+.arşmerproje img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1001;
+    max-width: 500px;
+    width: 90%;
+}
+
+.form-popup.active {
+    display: block;
+}
+
+.form-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.proje.yazı {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    color: #444;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.pkproje img:hover,
+.gmproje img:hover,
+.arşmerproje img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.lightbox-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.lightbox-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lightbox-controls button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    pointer-events: auto;
+    z-index: 1002;
+}
+
+.close-btn:hover {
+    background: #f8f8f8;
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+    .baslik h1 {
+        font-size: 36px;
+        padding-top: 5vh;
+    }
+
+    .menubar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .menubar ul.active {
+        display: flex;
+    }
+
+    .menubar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburgermenu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburgermenu span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(96, 96, 96);
+        transition: all 0.3s ease;
+    }
+
+    .hamburgermenu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 6px);
+    }
+
+    .hamburgermenu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburgermenu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -5px);
+    }
+
+    .pkproje, .gmproje, .arşmerproje {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proje.yazı {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .menubar ul.menu li a {
+        padding: 12px 20px;
+        margin: 5px 0;
+        background: rgba(245, 245, 245, 0.9);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .baslik h1 {
+        font-size: 28px;
+    }
+
+    .pkproje, .gmproje, .arşmerproje {
+        grid-template-columns: 1fr;
+    }
+
+    .form-popup {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+.iletisim-form {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.form-ac {
+    padding: 10px 20px;
+    background-color: rgb(140, 141, 109);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-ac:hover {
+    background-color: rgb(120, 121, 89);
+}
+
+.form-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-popup input,
+.form-popup textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.form-popup button {
+    padding: 10px;
+    background-color: rgb(140, 141, 109);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    transition: background-color 0.3s ease;
+}
+
+.form-popup button:hover {
+    background-color: rgb(120, 121, 89);
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+  
+}
+
+.form-popup.active {
+    display: block;
+}
+
+.iletisim-bilgileri {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 2rem 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.bilgi {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.bilgi i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: rgb(140, 141, 109);}
+
+
+
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.projeler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proje-kart {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.proje-kart:hover {
+    transform: translateY(-5px);
+}
+
+.proje-kart img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid rgb(140, 141, 109);
+}
+
+.proje-kart h3 {
+    flex-grow: 1;
+    padding: 1rem;
+    margin: 0;
+    font-family: 'Libre Caslon Display', serif;
+    color: rgb(72, 72, 72);
+    font-size: 1.4rem;
+}
+
+.proje-link {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(140, 141, 109, 0.2);
+}
+
+.proje-link:hover {
+    color: rgb(120, 121, 89);
+}
+
+.proje-link i {
+    font-size: 0.8em;
+}
+
+/* Hamburger Menu Styles */
+.hamburgermenu {
+    display: none; /* Masaüstünde gizle */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hamburgermenu span {
+    width: 30px;
+    height: 2px;
+    background-color: rgb(96, 96, 96);
+    transition: all 0.3s ease;
+}
+
+.menubar ul.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hamburgermenu {
+        display: flex; /* Mobilde göster */
+    }
+    
+    .menubar ul.menu {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+        z-index: 999;
+    }
+    
+    .menubar ul.menu.active {
+        display: flex;
+    }
+    
+    .menubar ul.menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Tüm sayfalarda içerik sarıcı div */
+body {
+    overflow-x: hidden;
+}
+
+/* Lightbox Header */
+.lightbox-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1002;
+}
+
+.close-btn {
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(0,0,0,0.8);
+    transform: rotate(90deg);
+}
+
+body.blur {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Lightbox Image Dragging */
+.lightbox-img {
+    cursor: default !important;
+}
+
+.lightbox-img.zoom-active {
+    cursor: grab;
+}
+
+.lightbox-img.zoom-active:active {
+    cursor: grabbing;
+}
+
+/* Lightbox kontrolleri her zaman görünür */
+.lightbox-header,
+.lightbox-controls {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content:hover .lightbox-header,
+.lightbox-content:hover .lightbox-controls {
+    opacity: 1;
+}
+
+.lightbox-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.lightbox-controls button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.lightbox-controls button:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.lightbox-img {
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+/* Yeni eklenen stiller */
+.proje-container {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Blur efektini kaldır */
+.blur-active {
+    pointer-events: none;
+}
+
+.blur-active .lightbox {
+    pointer-events: auto;
+}
+
+/* Lightbox düzeltmeleri */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.lightbox-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+}
+
+.lightbox-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.lightbox-controls button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Sayfa Yükleme Animasyonu */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(140, 141, 109);
+    transform: translateY(-100%);
+    z-index: 9999;
+    transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
